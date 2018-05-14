@@ -16,8 +16,6 @@ RUN pecl install redis-4.0.1 \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     	&& composer config -g repo.packagist composer https://packagist.phpcomposer.com
-
-RUN apt-get autoclean && apt-get clean && apt-get autoremove
  
 COPY cacert.pem /usr/local/etc/php/
 
